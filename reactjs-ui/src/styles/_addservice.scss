@@ -1,0 +1,128 @@
+.addservice {
+  &-container {
+    .title {
+      @include text(2.4rem);
+      font-weight: 700;
+      line-height: 3.6rem;
+      color: $orange-500;
+      margin: 1.6rem 0;
+    }
+    &-main {
+      background-color: $white;
+      padding: 1.6rem 2.4rem 3rem;
+      .heading {
+        @include heading(2rem);
+        line-height: 3rem;
+        color: $orange-500;
+      }
+      &-box {
+        display: flex;
+        width: 100%;
+        gap: 2.4rem;
+        &-content {
+          width: 50%;
+        }
+        &-desc {
+          width: 50%;
+        }
+        .sub-heading {
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: $gray-500;
+          span {
+            color: $red-dark;
+          }
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          font-size: 1.6rem;
+          color: $gray-200;
+          font-weight: 400;
+          line-height: 2.4rem;
+          margin-bottom: 1.2rem;
+        }
+        textarea {
+          padding: 1rem 27rem 0rem 1.2rem;
+          background: #ffffff;
+          border: 0.15rem solid #d4d4d7;
+          border-radius: 0.8rem;
+          font-size: 1.8rem;
+          color: #535261;
+        }
+      }
+      &-select {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-bottom: 2.4rem;
+        .block {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          .checkbox {
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            border: 0.2rem solid red;
+            border-radius: 4px;
+          }
+          .text {
+            width: 12%;
+            p {
+              font-size: 1.6rem;
+              color: $gray-500;
+              font-weight: 600;
+              line-height: 2.4rem;
+              margin: 0;
+            }
+          }
+          span {
+            font-size: 1.6rem;
+            color: $gray-500;
+            font-weight: 600;
+            line-height: 2.4rem;
+          }
+          .input-text {
+            width: 6.1rem;
+            height: 4.4rem;
+            input {
+              text-align: center;
+              background: #ffffff;
+              border: 0.15rem solid #d4d4d7;
+              border-radius: 0.8rem;
+              width: 100%;
+              height: 100%;
+              padding: 0;
+            }
+          }
+        }
+      }
+      &-note {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        span {
+          color: $red-dark;
+        }
+        .sub-note {
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+          color: $gray-300;
+        }
+      }
+    }
+    .function {
+      display: flex;
+      justify-content: center;
+      gap: 3.2rem;
+      margin: 4rem;
+      .btn-cancel {
+        background-color: $orange-50;
+      }
+    }
+  }
+}
