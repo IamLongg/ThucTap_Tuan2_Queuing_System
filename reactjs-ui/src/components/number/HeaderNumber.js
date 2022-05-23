@@ -6,7 +6,7 @@ const HeaderNumber = () => {
     <>
       <section className="headerdashboard" id="headerdashboard">
         <div className="headerdashboard-main">
-          <h2>
+          <h2 style={{ color: "#7e7d88" }}>
             Cấp số
             <RightOutlined
               style={{
@@ -15,7 +15,7 @@ const HeaderNumber = () => {
                 padding: "0 1rem",
               }}
             />
-            <span>Danh sách cấp số</span>
+            <span style={{ color: "#ff9138" }}>Danh sách cấp số</span>
           </h2>
         </div>
         <div className="headerdashboard-content">

@@ -11,6 +11,8 @@ import DeviceDetailPage from "./components/views/DeviceDetailPage";
 import ServicePage from "./components/views/ServicePage";
 import ServiceDetailPage from "./components/views/ServiceDetailPage";
 import NumberPage from "./components/views/NumberPage";
+import AddNewNumberPage from "./components/views/AddNewNumberPage";
+import NumberDetailPage from "./components/views/NumberDetailPage";
 import ReportPage from "./components/views/ReportPage";
 import SettingPage from "./components/views/SettingPage";
 import AddServicePage from "./components/views/AddServicePage";
@@ -31,6 +33,8 @@ function App() {
           <Route path="/add/service" element={<AddServicePage />} />
           <Route path="/service/detail" element={<ServiceDetailPage />} />
           <Route path="/number" element={<NumberPage />} />
+          <Route path="/add/number" element={<AddNewNumberPage />} />
+          <Route path="/number/detail" element={<NumberDetailPage />} />
           <Route path="/report" element={<ReportPage />} />
           <Route path="/setting" element={<SettingPage />} />
         </Routes>

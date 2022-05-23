@@ -1,13 +1,13 @@
 import imgnotify from "../../assets/images/iconnotify.png";
 import imguser from "../../assets/images/iconuser.png";
 import { RightOutlined } from "@ant-design/icons";
-const HeaderDevice = () => {
+const HeaderAddNumber = () => {
   return (
     <>
       <section className="headerdashboard" id="headerdashboard">
         <div className="headerdashboard-main">
           <h2 style={{ color: "#7e7d88" }}>
-            Thiết bị
+            Cấp số
             <RightOutlined
               style={{
                 color: "#d4d4d7",
@@ -15,7 +15,15 @@ const HeaderDevice = () => {
                 padding: "0 1rem",
               }}
             />
-            <span style={{ color: "#ff9138" }}>Danh sách thiết bị</span>
+            <span style={{ color: "#7e7d88" }}>Danh sách cấp số</span>
+            <RightOutlined
+              style={{
+                color: "#d4d4d7",
+                fontSize: "1.4rem",
+                padding: "0 1rem",
+              }}
+            />
+            <span style={{ color: "#ff9138" }}>Danh sách cấp số</span>
           </h2>
         </div>
         <div className="headerdashboard-content">
@@ -33,4 +41,4 @@ const HeaderDevice = () => {
   );
 };
 
-export default HeaderDevice;
+export default HeaderAddNumber;

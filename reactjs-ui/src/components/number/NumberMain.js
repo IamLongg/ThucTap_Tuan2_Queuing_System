@@ -26,7 +26,7 @@ const NumberMain = () => {
   let navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
-    navigate("/number/manage");
+    navigate("/add/number");
   };
 
   const handleClickDetail = (e) => {
@@ -175,7 +175,9 @@ const NumberMain = () => {
                   </tr>
                   <tr className="col8">
                     <td>
-                      <a href="">Chi tiết</a>
+                      <a href="" onClick={(e) => handleClickDetail(e)}>
+                        Chi tiết
+                      </a>
                     </td>
                   </tr>
                 </tbody>
