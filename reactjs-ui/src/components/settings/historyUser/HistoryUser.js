@@ -1,12 +1,11 @@
 import React from "react";
-import { BsFillFileEarmarkArrowDownFill } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
 import { DatePicker, Space } from "antd";
 import { FaCaretRight } from "react-icons/fa";
 import moment from "moment";
-
+import { FiSearch } from "react-icons/fi";
 import { Pagination } from "antd";
-const ReportMain = () => {
+
+const HistoryUser = () => {
   const { RangePicker } = DatePicker;
 
   const dateFormat = "YYYY/MM/DD";
@@ -21,22 +20,12 @@ const ReportMain = () => {
     `${moment(value).startOf("week").format(weekFormat)} ~ ${moment(value)
       .endOf("week")
       .format(weekFormat)}`;
-  let navigate = useNavigate();
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate("/add/service");
-  };
-
-  const handleClickDetail = (e) => {
-    e.preventDefault();
-    navigate("/service/detail");
-  };
   return (
     <>
-      <section className="report">
-        <div className="report-container">
+      <section className="history-user">
+        <div className="history-user-container">
           <div className="flex-box">
-            <div className="report-container-box">
+            <div className="history-user-container-box">
               <h3>Chọn thời gian</h3>
               <Space direction="vertical" size={12}>
                 <DatePicker
@@ -54,25 +43,31 @@ const ReportMain = () => {
                 />
               </Space>
             </div>
+            <div className="history-user-container-box">
+              <h3>Từ khóa</h3>
+              <div className="search">
+                <input type="text" placeholder="Nhập từ khóa" />
+                <span>
+                  <FiSearch />
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="report-container-table">
+          <div className="history-user-container-table">
             <div className="tbl-header">
               <table cellPadding="0" cellSpacing="0" border="0">
                 <thead>
                   <tr className="col1">
-                    <th>Số thứ tự</th>
+                    <th>Tên đăng nhập</th>
                   </tr>
                   <tr className="col2">
-                    <th>Tên dịch vụ</th>
+                    <th>Thời gian tác động</th>
                   </tr>
                   <tr className="col3">
-                    <th>Thời gian cấp</th>
+                    <th>IP thực hiện</th>
                   </tr>
                   <tr className="col4">
-                    <th>Trạng trạng</th>
-                  </tr>
-                  <tr className="col5">
-                    <th>Nguồn cấp</th>
+                    <th>Thao tác thực hiện</th>
                   </tr>
                 </thead>
               </table>
@@ -81,203 +76,134 @@ const ReportMain = () => {
               <table cellPadding="0" cellSpacing="0" border="0">
                 <tbody>
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody className="active">
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody>
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody className="active">
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody>
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody className="active">
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody>
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody className="active">
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
                 <tbody>
                   <tr className="col1">
-                    <td>2010001</td>
+                    <td>tuyetnguyen@12</td>
                   </tr>
                   <tr className="col2">
-                    <td>Khám tim mạch</td>
+                    <td>01/12/2021 15:12:17</td>
                   </tr>
                   <tr className="col3">
-                    <td>07:20 - 07/10/2021</td>
+                    <td>192.168.3.1</td>
                   </tr>
                   <tr className="col4">
-                    <td>
-                      <li className="green">
-                        <span>Đang chờ</span>
-                      </li>
-                    </td>
-                  </tr>
-                  <tr className="col5">
-                    <td>Kiosk</td>
+                    <td>Cập nhật thông tin dịch vụ</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-          <div className="report-container-function">
-            <button className="btn-add" onClick={(e) => handleClick(e)}>
-              <BsFillFileEarmarkArrowDownFill color="#ff9138" />
-              Tải <br /> xuống
-            </button>
-          </div>
-          <div className="report-container-pagination">
+          <div className="history-user-container-pagination">
             <Pagination defaultCurrent={1} total={100} />
           </div>
         </div>
@@ -286,4 +212,4 @@ const ReportMain = () => {
   );
 };
 
-export default ReportMain;
+export default HistoryUser;

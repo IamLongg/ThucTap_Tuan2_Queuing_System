@@ -1,4 +1,4 @@
-.manageDevice {
+.addUser {
   &-container {
     .title {
       @include text(2.4rem);
@@ -32,9 +32,11 @@
           width: 47.5%;
           margin-right: 2.4rem;
         }
-        &:last-child {
-          width: 100%;
+        &:nth-child(7) {
+          width: 47.5%;
+          margin-right: 2.4rem;
         }
+
         .sub-heading {
           font-weight: 600;
           font-size: 1.6rem;

@@ -1,14 +1,13 @@
-import imgnotify from "../../assets/images/iconnotify.png";
-import imguser from "../../assets/images/iconuser.png";
+import imgnotify from "../../../assets/images/iconnotify.png";
+import imguser from "../../../assets/images/iconuser.png";
 import { RightOutlined } from "@ant-design/icons";
-
-const HeaderDeviceDetail = () => {
+const HeaderManageUser = () => {
   return (
     <>
       <section className="headerdashboard" id="headerdashboard">
         <div className="headerdashboard-main">
           <h2 style={{ color: "#7e7d88" }}>
-            Thiết bị
+            Cài đặt hệ thống
             <RightOutlined
               style={{
                 color: "#d4d4d7",
@@ -16,15 +15,7 @@ const HeaderDeviceDetail = () => {
                 padding: "0 1rem",
               }}
             />
-            <span style={{ color: "#7e7d88" }}>Danh sách thiết bị</span>
-            <RightOutlined
-              style={{
-                color: "#d4d4d7",
-                fontSize: "1.4rem",
-                padding: "0 1rem",
-              }}
-            />
-            <span style={{ color: "#ff9138" }}>Chi tiết thiết bị</span>
+            <span style={{ color: "#ff9138" }}>Quản lý tài khoản</span>
           </h2>
         </div>
         <div className="headerdashboard-content">
@@ -42,4 +33,4 @@ const HeaderDeviceDetail = () => {
   );
 };
 
-export default HeaderDeviceDetail;
+export default HeaderManageUser;

@@ -15,7 +15,11 @@ import AddNewNumberPage from "./components/views/AddNewNumberPage";
 import NumberDetailPage from "./components/views/NumberDetailPage";
 import ReportPage from "./components/views/ReportPage";
 import SettingPage from "./components/views/SettingPage";
+import AddRolePage from "./components/views/AddRolePage";
 import AddServicePage from "./components/views/AddServicePage";
+import ManageUserPage from "./components/views/ManageUserPage";
+import AddUserPage from "./components/views/AddUserPage";
+import HistoryUserPage from "./components/views/HistoryUserPage";
 function App() {
   return (
     <div className="app">
@@ -36,7 +40,11 @@ function App() {
           <Route path="/add/number" element={<AddNewNumberPage />} />
           <Route path="/number/detail" element={<NumberDetailPage />} />
           <Route path="/report" element={<ReportPage />} />
-          <Route path="/setting" element={<SettingPage />} />
+          <Route path="/manage-role" element={<SettingPage />} />
+          <Route path="/add/manage-role" element={<AddRolePage />} />
+          <Route path="/manage-user" element={<ManageUserPage />} />
+          <Route path="/add/manage-user" element={<AddUserPage />} />
+          <Route path="/history" element={<HistoryUserPage />} />
         </Routes>
       </div>
     </div>
