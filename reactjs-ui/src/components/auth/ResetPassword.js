@@ -1,8 +1,15 @@
 import logo from "../../assets/images/Logoalta.png";
 import imgIntro from "../../assets/images/forgotpass-intro.png";
 import eyeClose from "../../assets/images/eye-close.png";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
+  let navigate = useNavigate();
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
+
   return (
     <>
       <section className="resetpassword" id="resetpassword">
@@ -20,7 +27,9 @@ const ResetPassword = () => {
               <input type="password" className="input-resetpassword" />
               <img src={eyeClose} alt="" className="icon" />
             </div>
-            <button className="btn">Xác nhận</button>
+            <button className="btn" onClick={(e) => handleClick(e)}>
+              Xác nhận
+            </button>
           </div>
         </div>
         <div className="resetpassword-intro">

@@ -24,7 +24,6 @@ const ReportMain = () => {
   let navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
-    navigate("/add/service");
   };
 
   const handleClickDetail = (e) => {
