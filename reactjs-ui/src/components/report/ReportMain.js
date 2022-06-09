@@ -3,6 +3,7 @@ import { BsFillFileEarmarkArrowDownFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { DatePicker, Space } from "antd";
 import { FaCaretRight } from "react-icons/fa";
+import iconarrowright from "../../assets/images/iconarrowright.png";
 import moment from "moment";
 
 import { Pagination } from "antd";
@@ -59,19 +60,103 @@ const ReportMain = () => {
               <table cellPadding="0" cellSpacing="0" border="0">
                 <thead>
                   <tr className="col1">
-                    <th>Số thứ tự</th>
+                    <th>
+                      <div className="dropdown">
+                        <div className="dropdown-select">
+                          <span className="select">Số thứ tự</span>
+                          <img src={iconarrowright} alt="" />
+                        </div>
+                        <div className="dropdown-list">
+                          <div className="dropdown-list__item">Tất cả</div>
+                          <div className="dropdown-list__item">2040001</div>
+                          <div className="dropdown-list__item">2060001</div>
+                          <div className="dropdown-list__item">2050002</div>
+                        </div>
+                      </div>
+                    </th>
                   </tr>
                   <tr className="col2">
-                    <th>Tên dịch vụ</th>
+                    <th>
+                      <div className="dropdown">
+                        <div className="dropdown-select">
+                          <span className="select">Tên dịch vụ</span>
+                          <img src={iconarrowright} alt="" />
+                        </div>
+                        <div className="dropdown-list">
+                          <div className="dropdown-list__item">
+                            <h3>Tất cả</h3>
+                            <input type="checkbox" className="checkbox" />
+                          </div>
+                          <div className="dropdown-list__item">
+                            <h3>Khám tim mạch</h3>
+                            <input type="checkbox" className="checkbox" />
+                          </div>
+                          <div className="dropdown-list__item">
+                            <h3>Khám mắt</h3>
+                            <input type="checkbox" className="checkbox" />
+                          </div>
+                          <div className="dropdown-list__item">
+                            <h3>Khám tổng quát</h3>
+                            <input type="checkbox" className="checkbox" />
+                          </div>
+                        </div>
+                      </div>
+                    </th>
                   </tr>
                   <tr className="col3">
-                    <th>Thời gian cấp</th>
+                    <th>
+                      <div className="dropdown">
+                        <div className="dropdown-select">
+                          <span className="select">Thời gian cấp</span>
+                          <img src={iconarrowright} alt="" />
+                        </div>
+                        <div className="dropdown-list">
+                          <div className="dropdown-list__item">Tất cả</div>
+                          <div className="dropdown-list__item">
+                            07:10 01/10/2021
+                          </div>
+                          <div className="dropdown-list__item">
+                            07:15 01/10/2021
+                          </div>
+                          <div className="dropdown-list__item">
+                            07:28 01/10/2021
+                          </div>
+                        </div>
+                      </div>
+                    </th>
                   </tr>
                   <tr className="col4">
-                    <th>Trạng trạng</th>
+                    <th>
+                      <div className="dropdown">
+                        <div className="dropdown-select">
+                          <span className="select">Tình trạng</span>
+                          <img src={iconarrowright} alt="" />
+                        </div>
+                        <div className="dropdown-list">
+                          <div className="dropdown-list__item">Tất cả</div>
+                          <div className="dropdown-list__item">Đang chờ</div>
+                          <div className="dropdown-list__item">
+                            Đang sử dụng
+                          </div>
+                          <div className="dropdown-list__item">Bỏ qua</div>
+                        </div>
+                      </div>
+                    </th>
                   </tr>
                   <tr className="col5">
-                    <th>Nguồn cấp</th>
+                    <th>
+                      <div className="dropdown">
+                        <div className="dropdown-select">
+                          <span className="select">Nguồn cấp</span>
+                          <img src={iconarrowright} alt="" />
+                        </div>
+                        <div className="dropdown-list">
+                          <div className="dropdown-list__item">Tất cả</div>
+                          <div className="dropdown-list__item">Kiosk</div>
+                          <div className="dropdown-list__item">Hệ thống</div>
+                        </div>
+                      </div>
+                    </th>
                   </tr>
                 </thead>
               </table>

@@ -19,71 +19,7 @@
         font-weight: 600;
         margin-bottom: 0.4rem;
       }
-      .dropdown {
-        width: 30rem;
-        position: relative;
-        &-select {
-          background-color: $white;
-          padding: 1rem 1.2rem;
-          font-size: 1.6rem;
-          border-radius: 0.8rem;
-          border: 0.15rem solid $gray-100;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          cursor: pointer;
-          .select {
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            color: $gray-300;
-          }
-          img {
-            width: 100%;
-            height: 100%;
-            max-width: 1.2rem;
-            max-height: 0.6rem;
-            object-fit: cover;
-          }
-        }
-        &-list {
-          border-radius: 0.4rem;
-          background-color: $white;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.2s linear, visibility 0.2s linear;
-          transform: translateY(10px);
 
-          &:before {
-            content: "";
-            width: 100%;
-            height: 1rem;
-            background-color: transparent;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translateY(-100%);
-          }
-        }
-      }
-      .dropdown:hover .dropdown-list {
-        opacity: 1;
-        visibility: visible;
-        z-index: 1;
-      }
-      .dropdown-list__item {
-        padding: 1rem;
-        font-size: 1.6rem;
-        font-weight: 400;
-        font-weight: 400;
-        color: $gray-400;
-        cursor: pointer;
-      }
       .search {
         position: relative;
         input {
@@ -196,6 +132,86 @@
         border-top-right-radius: 1.2rem;
         tr {
           border-right: 0.1rem solid $orange-50;
+          th {
+            width: 55%;
+            .dropdown {
+              position: relative;
+              &-select {
+                font-size: 1.6rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                .select {
+                  font-weight: 400;
+                  font-size: 1.6rem;
+                  line-height: 2.4rem;
+                  color: $white;
+                }
+                img {
+                  width: 100%;
+                  height: 100%;
+                  max-width: 1.2rem;
+                  max-height: 1.2rem;
+                  object-fit: cover;
+                }
+              }
+              &-list {
+                border-radius: 0.4rem;
+                background-color: $white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s linear, visibility 0.2s linear;
+                transform: translateY(10px);
+                &:before {
+                  content: "";
+                  width: 100%;
+                  height: 1rem;
+                  background-color: transparent;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  transform: translateY(-100%);
+                }
+              }
+            }
+            .dropdown:hover .dropdown-list {
+              opacity: 1;
+              visibility: visible;
+              z-index: 1;
+            }
+            .dropdown-list__item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 1rem;
+              font-size: 1.4rem;
+              font-weight: 400;
+              font-weight: 400;
+              color: $gray-400;
+              cursor: pointer;
+              .checkbox {
+                width: 20px;
+                height: 20px;
+                background: #ffffff;
+                border: 0.2rem solid red;
+                border-radius: 4px;
+              }
+              h3 {
+                font-size: 1.4rem;
+                font-weight: 400;
+                font-weight: 400;
+                color: $gray-400;
+                margin: 0;
+                cursor: pointer;
+              }
+            }
+          }
         }
       }
       .tbl-content {

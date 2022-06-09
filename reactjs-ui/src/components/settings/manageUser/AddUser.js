@@ -1,5 +1,14 @@
 import icondropdown from "../../../assets/images/icondropdown.png";
+import eyeClose from "../../../assets/images/eye-close.png";
+import eyeOpen from "../../../assets/images/iconeyeopen.png";
+import React, { useState } from "react";
 const AddUser = () => {
+  const [isShowPass, setIsShowPass] = useState(false);
+
+  const handleShowPass = () => {
+    setIsShowPass(!isShowPass);
+  };
+
   return (
     <>
       <section className="addUser">
@@ -30,7 +39,25 @@ const AddUser = () => {
                 <h5 className="sub-heading">
                   Mật khẩu: <span>*</span>
                 </h5>
-                <input type="password" placeholder="Nhập mật khẩu" />
+                <input
+                  type={isShowPass ? "text" : "password"}
+                  placeholder="Nhập mật khẩu"
+                />
+                {isShowPass ? (
+                  <img
+                    src={eyeOpen}
+                    alt=""
+                    className="iconeye"
+                    onClick={handleShowPass}
+                  />
+                ) : (
+                  <img
+                    src={eyeClose}
+                    alt=""
+                    className="iconeye"
+                    onClick={handleShowPass}
+                  />
+                )}
               </div>
               <div className="addUser-container-main-box">
                 <h5 className="sub-heading">
@@ -42,7 +69,25 @@ const AddUser = () => {
                 <h5 className="sub-heading">
                   Nhập lại mật khẩu: <span>*</span>
                 </h5>
-                <input type="password" placeholder="Nhập lại mật khẩu" />
+                <input
+                  type={isShowPass ? "text" : "password"}
+                  placeholder="Nhập lại mật khẩu"
+                />
+                {isShowPass ? (
+                  <img
+                    src={eyeOpen}
+                    alt=""
+                    className="iconeye"
+                    onClick={handleShowPass}
+                  />
+                ) : (
+                  <img
+                    src={eyeClose}
+                    alt=""
+                    className="iconeye"
+                    onClick={handleShowPass}
+                  />
+                )}
               </div>
               <div className="addUser-container-main-box">
                 <h5 className="sub-heading">
